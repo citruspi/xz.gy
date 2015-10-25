@@ -1,0 +1,13 @@
+script: return 0
+before_deploy: make release
+deploy:
+  provider: s3
+  access_key_id: AKIAJBSHRZZD7LWIS2XQ
+  bucket: gy.xz.www
+  skip_cleanup: true
+  local-dir: release
+  acl: public_read
+  on:
+    repo: citruspi/xz.gy
+  secret_access_key:
+    secure: O6YSm/e8zYpUXgMgBXJC+/JIFNrBQo906CyPvNhuhqyhR0szA2e0MOI2YWUVPUeAhyBVZIsdMDWUMbSRuZLHkOw5j0yezOX232WreBtzJhKGQEcdFX+spbJR8yWrarORqPNSIxilxQJ2c8LpzDUKt5rmuAZGLzj0ugXMqOF2WcIBRMyoIDoSjpbq38KjjcCz6DJsaSJn/9ZuCfcl6wh+PH2ki62k3FfnbJFfKjirShH8Jc9WxgjcwnLIE1JBijuiugFIduZTqA8dbitO7tC1MOqC25OlJLB/4wguClHCLf/fZtm1QuRHZBhOYgKvrx9k4oX20R8HscKqMLkXkKwuHqCMNl/7Ym7/vgCFs7bwhacHJCTE9a4YGYJvln+9+YI4+7yOhYWm4mxyMLCbFU7ry0Iz1o2R/OXfZt3PdH3eTiZjjUAzVNm2ls0H0aRkka0bKKUx3Q4IGnUt7WMNQ1xsERiyh/iHN9b4ra1TyeG0isxz1gxKDF3c0aYGpuBIXOhpqgXdxZn6/Ou2i+Ka2GM42DC4WksJZrn7I0PEoODcgPqaSqJlymTit+9EEPWkUe7jm07usgYsqcNSNexa8bCRB2aClSzb5vesOSuqna8+3e1Zz8vN7zEuI0y4bAC/LproLvQ8Z12qFN+Okg673xDXik6W/f9QL8VhMcSkkw30YPQ=
